@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'LeagueSpartan': ['League Spartan', 'sans-serif']
+          } 
+        }
+      }
+    }
+  </script>
+  <title>Frontend Mentor | Room homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="lg:w-[90%] lg:mx-auto mt-10 transition-all">
+  <nav class="hidden lg:block absolute top-24 left-32 ">
+    <ul class="flex flex-row font-LeagueSpartan text-white items-center justify-center">
+      <li class="mx-7 -mt-1 text-3xl justify-center"><h1>room</h1></li>
+      <li class="mx-5 text-md cursor-pointer font-bold"><h3>H<span class=" decoration-2 underline-offset-[10px] hover:underline">om</span>e</h3></li>
+      <li class="mx-5 text-md cursor-pointer font-bold"><h3>S<span class=" decoration-2 underline-offset-[10px] hover:underline">ho</span>p</h3></li>
+      <li class="mx-5 text-md cursor-pointer font-bold"><h3>A<span class=" decoration-2 underline-offset-[10px] hover:underline">bou</span>t</h3></li>
+      <li class="mx-5 text-md cursor-pointer font-bold"><h3>Co<span class=" decoration-2 underline-offset-[10px] hover:underline">nta</span>ct</h3></li>
+    </ul>
+  </nav>
+  <nav id="mobile" class="lg:hidden flex z-10">
+    <div class="flex flex-row z-10">
+      <img id="burger" width="40" height="auto" class="ml-3 mr-[125px]" src="./images/icon-hamburger.svg">
+      <h2 class="text-2xl text-white font-LeagueSpartan z-50">
+        room
+      </h2>
+    </div>
+    <div id="menumb" class="hidden absolute w-screen top-0 bg-white h-32 z-20">
+      <ul class="flex flex-row h-full w-full items-center justify-center m-auto">
+        <li><img id="closeIcon" class="ml-2 mr-16" src="./images/icon-close.svg"></li>
+        <li class="mx-3 text-md cursor-pointer font-bold"><h3>H<span class="">om</span>e</h3></li>
+        <li class="mx-3 text-md cursor-pointer font-bold"><h3>S<span class="">ho</span>p</h3></li>
+        <li class="mx-3 text-md cursor-pointer font-bold"><h3>A<span class="">bou</span>t</h3></li>
+        <li class="mx-3 text-md cursor-pointer font-bold"><h3>Co<span class="">nta</span>ct</h3></li>
+      </ul>
+    </div>
+    <div id="dimbg" class="hidden bg-black opacity-60 absolute top-32 w-full z-20 h-screen">
+    </div>
+  </nav>
+  <section class="flex flex-col md:flex-row w-[100%]">
+  <div id="imgDesktop" class="hidden lg:block w-[55%]">
+    <img class="img" src="./images/desktop-image-hero-1.jpg">
+    <img class="img hidden" src="./images/desktop-image-hero-2.jpg">
+    <img class="img hidden" src="./images/desktop-image-hero-3.jpg">
+  </div>
+  <div id="imgMobile" class="lg:hidden block absolute top-0 z-0">
+    <img class="imgmb" width="430px" src="./images/mobile-image-hero-1.jpg">
+    <img class="imgmb hidden" width="430px" src="./images/mobile-image-hero-2.jpg">
+    <img class="imgmb hidden" width="430px" src="./images/mobile-image-hero-3.jpg">
+  </div>
+  <div class="flex flex-col mt-[380px] lg:m-0 relative font-LeagueSpartan justify-center lg:w-[60%]">
+    <div class="flex flex-col font-LeagueSpartan lg:w-[50%] lg:ml-32 w-[80%] mx-auto">
+      <h1 id="header1" class="lg:text-5xl text-3xl font-bold mb-8">
+        Discover innovative ways to decorate
+      </h1>
+      <p class="paragraph text-justify text-gray-500 mb-5">
+        We provide unmatched quality, comfort, and style for property owners across the country. 
+    Our experts combine form and function in bringing your vision to life. Create a room in your 
+    own style with our collection and make your property a reflection of you and what you love.
+      </p>
+      <h1 id="header2" class="hidden lg:text-5xl text-3xl font-bold mb-8">
+        We are available all across the globe
+      </h1>
+      <p class="paragraph hidden text-justify text-gray-500 mb-5">
+        With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+        Locally, were in most major cities throughout the country. Find the branch nearest you using our 
+        store locator. Any questions? Don't hesitate to contact us today.
+      </p>
+      <h1 id="header3" class="hidden lg:text-5xl text-3xl font-bold mb-8">
+        Manufactured with the best materials
+      </h1>
+      <p class="paragraph hidden text-justify text-gray-500 mb-5">
+        Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+  experience in this industry, we understand what customers want for their home and office.
+      </p>
+      <a href="/" class="flex flex-row items-center hover:text-gray-500"><h2 class=" text-md tracking-[1em] mr-5 font-bold ">SHOP NOW </h2> <img src="./images/icon-arrow.svg"  class="w-auto h-3"/></a>
+    </div>
+  <div class="absolute flex flex-row -top-[124px] right-0 lg:right-auto lg:top-auto lg:bottom-0 lg:left-0">
+    <div id="prevBtn" class="bg-black hover:bg-gray-700 cursor-pointer py-6 px-8">
+      <img width="20px" height="20px" src="./images/icon-angle-left.svg" />
+    </div>
+    <div id="nextBtn" class="bg-black hover:bg-gray-700 cursor-pointer py-6 px-8">
+      <img width="20px" height="20px" src="./images/icon-angle-right.svg">
+    </div>
+  </div>
+</section>
+<section class="flex flex-col mt-5 lg:mt-0 lg:flex-row w-[100%]">
+  <img class="" src="./images/image-about-dark.jpg" />
+  <div class="flex flex-col lg:w-[33%] justify-center py-5 lg:py-0 px-10 font-LeagueSpartan">
+    <h1 class="text-md uppercase tracking-[.5em] lg:tracking-[.6em] font-bold my-10 lg:my-5">
+      About our furniture
+    </h1>
+    <p class="text-justify text-gray-400">
+  Our multifunctional collection blends design and function to suit your individual taste.
+  Make each room unique, or pick a cohesive theme that best express your interests and what
+  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+  or anything in between. Product specialists are available to help you create your dream space.
+    </p>
+  </div>
+  <img src="./images/image-about-light.jpg" />
+</section>
+
+ 
+<!--  
+
+
+ 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">QwertyFate</a>.
+  </div> -->
+  <script src="./index.js"></script>
+</body>
+</html>
